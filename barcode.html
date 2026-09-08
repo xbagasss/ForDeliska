@@ -4,33 +4,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Barcode For Jana</title>
+    <title>Barcode For Jana 🤍</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:ital@1&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         body {
-            background-color: #292524;
+            background-color: #1c1917;
             background-image: url('https://www.transparenttextures.com/patterns/stardust.png');
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
-            height: 100vh;
+            min-height: 100vh;
             margin: 0;
+            padding: 20px;
         }
 
         .scrapbook-canvas {
             background-color: #F4ECD8;
             background-image: url('https://www.transparenttextures.com/patterns/handmade-paper.png');
-            width: 400px;
-            height: 550px;
-            border-radius: 8px;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+            width: 100%;
+            max-width: 380px;
+            min-height: 540px;
+            border-radius: 12px;
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.7), 0 0 20px rgba(212, 175, 55, 0.2);
             position: relative;
             display: flex;
             flex-direction: column;
             align-items: center;
-            padding: 40px 20px;
+            padding: 40px 24px;
             border: 1px solid #e3d1bb;
             transform: rotate(-1deg);
         }
@@ -38,12 +42,12 @@
         /* Tape decoration */
         .tape {
             position: absolute;
-            background: rgba(255, 255, 255, 0.5);
-            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+            background: rgba(255, 255, 255, 0.6);
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
             backdrop-filter: blur(2px);
-            width: 120px;
-            height: 30px;
-            top: -15px;
+            width: 130px;
+            height: 32px;
+            top: -16px;
             left: 50%;
             transform: translateX(-50%) rotate(-3deg);
             z-index: 10;
@@ -52,35 +56,32 @@
         /* Square Frame containing QR */
         .qr-frame {
             position: relative;
-            width: 240px;
-            height: 240px;
+            width: 230px;
+            height: 230px;
             background: #F4ECD8;
-            padding: 10px;
+            padding: 12px;
             border: 4px solid #D4AF37;
-            /* Soft gold border */
-            border-radius: 12px;
+            border-radius: 14px;
             display: flex;
             justify-content: center;
             align-items: center;
             margin-top: 20px;
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-            transform: rotate(2deg);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+            transform: rotate(1.5deg);
         }
 
         .qr-image {
             width: 100%;
             height: 100%;
-            /* QuickChart API for a brown QR code with a Heart icon in the center */
-            background-image: url('https://quickchart.io/qr?text=https%3A%2F%2Fxbagasss.github.io%2FForJenni%2F&dark=3E2723&light=F4ECD8&margin=0&size=400&centerImageUrl=https%3A%2F%2Fcdn-icons-png.flaticon.com%2F512%2F833%2F833472.png');
-            background-size: cover;
-            background-position: center;
-            border-radius: 6px;
+            object-fit: contain;
+            border-radius: 8px;
         }
 
         .flower {
             position: absolute;
-            font-size: 45px;
-            filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.3));
+            font-size: 42px;
+            filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.3));
+            pointer-events: none;
         }
     </style>
 </head>
@@ -90,22 +91,32 @@
     <div class="scrapbook-canvas">
         <div class="tape"></div>
 
-        <h1 class="text-5xl text-[#3E2723] mt-4" style="font-family: 'Great Vibes', cursive;">For Jana 🤍</h1>
-        <p class="text-lg text-[#D4AF37] italic mt-2" style="font-family: 'Playfair Display', serif;">Scan to uncover
-            her beauty</p>
+        <h1 class="text-5xl text-[#3E2723] mt-2" style="font-family: 'Great Vibes', cursive;">For Jana 🤍</h1>
+        <p class="text-sm text-[#D4AF37] italic mt-1 font-semibold tracking-wider"
+            style="font-family: 'Playfair Display', serif;">Scan to uncover her beauty</p>
 
         <!-- The QR Code -->
         <div class="qr-frame">
-            <div class="qr-image"></div>
+            <img src="assets/qr_jana.png" alt="QR Code For Jana" class="qr-image">
         </div>
 
-        <p class="text-2xl text-[#3E2723] mt-8 opacity-80" style="font-family: 'Great Vibes', cursive;">With all my
+        <p class="text-xs text-[#3E2723]/60 mt-3 font-mono">https://xbagasss.github.io/ForJana/</p>
+
+        <p class="text-2xl text-[#3E2723] mt-4 opacity-90" style="font-family: 'Great Vibes', cursive;">With all my
             admiration</p>
 
         <!-- Decorations -->
-        <div class="flower" style="top: 80px; left: -25px; transform: rotate(-15deg);">🌸</div>
-        <div class="flower" style="bottom: 40px; right: -20px; transform: rotate(20deg);">🎀</div>
-        <div class="flower" style="top: 200px; right: -30px; font-size: 30px;">🕊️</div>
+        <div class="flower" style="top: 70px; left: -20px; transform: rotate(-15deg);">🌸</div>
+        <div class="flower" style="bottom: 35px; right: -18px; transform: rotate(20deg);">🎀</div>
+        <div class="flower" style="top: 190px; right: -25px; font-size: 28px;">🕊️</div>
+    </div>
+
+    <!-- Action Buttons -->
+    <div class="mt-8 flex gap-4">
+        <a href="assets/qr_jana.png" download="QR_Barcode_For_Jana.png"
+            class="px-6 py-2.5 bg-[#D4AF37] hover:bg-[#b8952b] text-[#1c1917] font-semibold rounded-full shadow-lg transition-all flex items-center gap-2 text-sm">
+            <i class="fas fa-download"></i> Unduh Gambar QR
+        </a>
     </div>
 
 </body>

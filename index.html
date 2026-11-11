@@ -357,25 +357,26 @@
             animation: starTwinkle 3.5s ease-in-out infinite;
         }
 
-        /* Deliska Custom Face Emote Stickers */
-        .emote-sticker {
+        /* Deliska Cute Anime Chibi Stickers */
+        .chibi-sticker, .emote-sticker {
             position: absolute;
-            z-index: 30;
-            filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.45)) drop-shadow(0 0 10px rgba(56, 189, 248, 0.35));
+            z-index: 25;
+            filter: drop-shadow(0 6px 14px rgba(0, 0, 0, 0.45));
             transition: transform 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.275), filter 0.35s ease;
             cursor: pointer;
             user-select: none;
             -webkit-user-drag: none;
             touch-action: manipulation;
+            pointer-events: auto;
         }
 
-        .emote-sticker:hover {
-            transform: scale(1.15) rotate(calc(var(--sticker-rot, 0deg) + 6deg)) !important;
-            filter: drop-shadow(0 14px 22px rgba(0, 0, 0, 0.6)) drop-shadow(0 0 18px rgba(56, 189, 248, 0.8));
+        .chibi-sticker:hover, .emote-sticker:hover {
+            transform: scale(1.18) rotate(calc(var(--sticker-rot, 0deg) + 6deg)) !important;
+            filter: drop-shadow(0 12px 22px rgba(0, 0, 0, 0.6)) drop-shadow(0 0 14px rgba(56, 189, 248, 0.7));
             z-index: 50 !important;
         }
 
-        .emote-sticker:active {
+        .chibi-sticker:active, .emote-sticker:active {
             transform: scale(0.92) rotate(var(--sticker-rot, 0deg)) !important;
         }
 
@@ -761,6 +762,12 @@
                     class="polaroid p-3 bg-vintage-paper rotate-[-1.5deg] sm:rotate-[-2deg] transition-transform duration-700 w-full mx-auto relative z-10">
                     <div class="tape rotate-3 top-[-15px]"></div>
 
+                    <!-- Chibi Birthday Cake Sticker peeking at top-right corner of hero polaroid -->
+                    <img src="assets/chibi_cake.png?v=3" alt="Chibi Birthday Cake Sticker"
+                        title="Happy 21st Birthday Deliska! 🎂 Tap me!"
+                        class="chibi-sticker animate-sticker-1 w-20 sm:w-24 md:w-28 -top-8 -right-4 sm:-top-10 sm:-right-6"
+                        style="--sticker-rot: 8deg;">
+
                     <!-- Mini Vintage Airmail Stamp -->
                     <div class="absolute -top-3 -right-3 bg-white/95 border border-sky-400 p-1 shadow-md transform rotate-6 z-20 hidden sm:block">
                         <div class="border border-dashed border-sky-500 px-2 py-0.5 text-center">
@@ -777,12 +784,6 @@
                         Pure Perfection — Pesonamu Selalu Memikat ✨
                     </div>
                 </div>
-
-                <!-- Queen Deliska Emote Sticker Floating at Bottom-Right of Hero Frame -->
-                <img src="assets/emote_queen.png?v=2" alt="Queen Deliska Emote"
-                    title="Tap me! ✨ Queen Deliska 21"
-                    class="emote-sticker animate-sticker-1 w-20 sm:w-24 md:w-28 -bottom-5 -right-3 sm:-bottom-7 sm:-right-7"
-                    style="--sticker-rot: 8deg;">
             </div>
 
             <!-- Hero Text -->
@@ -821,12 +822,6 @@
                 <!-- Washi Tape on Paper Corners -->
                 <div class="washi-tape-blue w-20 md:w-28 -top-3 -left-2 md:-left-5 -rotate-45 z-20"></div>
                 <div class="washi-tape-blue w-20 md:w-28 -top-3 -right-2 md:-right-5 rotate-45 z-20"></div>
-
-                <!-- Sweet & Lovely Deliska Emote Sticker Peeking at Top Right -->
-                <img src="assets/emote_hearts.png?v=2" alt="Sweet and Lovely Deliska Emote"
-                    title="Tap me! 💖 So Sweet & Lovely"
-                    class="emote-sticker animate-sticker-2 w-20 sm:w-24 md:w-28 -top-8 -right-2 sm:-top-10 sm:-right-6"
-                    style="--sticker-rot: 10deg;">
 
                 <!-- Pinned top -->
                 <div class="pin z-20">📌</div>
@@ -903,12 +898,6 @@
                 <div class="absolute top-4 right-4 text-soft-gold/40 text-xl pointer-events-none select-none star-twinkle" style="animation-delay: 1.5s;">✦</div>
                 <div class="absolute bottom-4 left-4 text-soft-gold/40 text-xl pointer-events-none select-none star-twinkle" style="animation-delay: 0.8s;">✦</div>
                 <div class="absolute bottom-4 right-4 text-soft-gold/40 text-xl pointer-events-none select-none star-twinkle" style="animation-delay: 2.2s;">✦</div>
-
-                <!-- Party Time Deliska Emote Sticker -->
-                <img src="assets/emote_party.png?v=2" alt="Party Time 21st Deliska Emote"
-                    title="Tap me! 🎉 Party Time 21st!"
-                    class="emote-sticker animate-sticker-1 w-18 sm:w-24 md:w-28 top-3 left-3 sm:top-5 sm:left-6"
-                    style="--sticker-rot: -6deg;">
 
                 <!-- Botanical Lavender tucked on corner -->
                 <img src="assets/lavender.png?v=2" alt="Lavender" class="w-20 sm:w-28 md:w-36 -top-6 sm:-top-10 -right-6 sm:-right-10 rotate-45 botanical-decor opacity-25 -z-10">
@@ -1024,8 +1013,13 @@
                 </div>
 
                 <!-- Photo 2 (jenni2.jpg) -->
-                <div data-aos="zoom-in" data-aos-delay="100" class="polaroid w-60 md:w-64 rotate-[1.5deg] sm:rotate-[7deg] z-10">
+                <div data-aos="zoom-in" data-aos-delay="100" class="polaroid w-60 md:w-64 rotate-[1.5deg] sm:rotate-[7deg] z-10 relative">
                     <div class="tape rotate-[-4deg]"></div>
+                    <!-- Chibi Princess Crown Sticker at top-right corner -->
+                    <img src="assets/chibi_crown.png?v=3" alt="Chibi Princess Crown Sticker"
+                        title="Princess Deliska 👑 Tap me!"
+                        class="chibi-sticker animate-sticker-2 w-16 sm:w-20 md:w-22 -top-6 -right-4 sm:-top-7 sm:-right-6"
+                        style="--sticker-rot: 10deg;">
                     <img src="assets/jenni2.jpg?v=2" alt="Deliska Cantika Mahendra" class="aspect-[4/5] object-cover">
                     <div class="mt-2 sm:mt-3 text-center font-handwriting text-dark-brown text-lg sm:text-xl md:text-2xl">Pesona yang begitu anggun, effortless grace that captivates every single heart 💫</div>
                 </div>
@@ -1038,17 +1032,16 @@
                     <div class="sticky-note-blue -top-4 -left-2 sm:-left-3 -rotate-3 z-30 text-sm sm:text-base">Art in Human Form 💙</div>
                     <img src="assets/jenni3.jpg?v=2" alt="Deliska Cantika Mahendra" class="w-full aspect-square object-cover relative z-10">
                     <div class="absolute -top-5 sm:-top-6 -right-5 sm:-right-6 text-4xl sm:text-5xl drop-shadow-lg z-20">🦋</div>
-
-                    <!-- Iconic Deliska Emote Sticker -->
-                    <img src="assets/emote_iconic.png?v=2" alt="Iconic Deliska Emote"
-                        title="Tap me! ✨ Iconic Deliska 21"
-                        class="emote-sticker animate-sticker-2 w-18 sm:w-22 md:w-26 -bottom-5 -left-3 sm:-bottom-7 sm:-left-5"
-                        style="--sticker-rot: -6deg;">
                 </div>
 
                 <!-- Photo 4 (jenni4.jpg) -->
-                <div data-aos="fade-up" data-aos-delay="200" class="polaroid w-64 md:w-72 rotate-[-1.5deg] sm:rotate-[-4deg] z-10">
+                <div data-aos="fade-up" data-aos-delay="200" class="polaroid w-64 md:w-72 rotate-[-1.5deg] sm:rotate-[-4deg] z-10 relative">
                     <div class="pin">📌</div>
+                    <!-- Chibi Peace Sign Sticker at top-left corner -->
+                    <img src="assets/chibi_peace.png?v=3" alt="Chibi Peace Sign Sticker"
+                        title="Stay Cheerful ✌️ Tap me!"
+                        class="chibi-sticker animate-sticker-1 w-16 sm:w-20 md:w-22 -top-6 -left-4 sm:-top-7 sm:-left-6"
+                        style="--sticker-rot: -8deg;">
                     <img src="assets/jenni4.jpg?v=2" alt="Deliska Cantika Mahendra" class="aspect-[4/5] object-cover">
                     <div class="mt-2 sm:mt-3 text-center font-handwriting text-dark-brown text-lg sm:text-xl md:text-2xl">
                         Cahaya manismu tak pernah pudar, an everlasting radiance that stays forever 🕊️</div>
@@ -1063,8 +1056,13 @@
                 </div>
 
                 <!-- Photo 6 (jenni6.jpg) -->
-                <div data-aos="zoom-in-right" data-aos-delay="300" class="polaroid w-64 md:w-72 rotate-[-1.5deg] sm:rotate-[-5deg] z-10">
+                <div data-aos="zoom-in-right" data-aos-delay="300" class="polaroid w-64 md:w-72 rotate-[-1.5deg] sm:rotate-[-5deg] z-10 relative">
                     <div class="tape rotate-[-3deg]"></div>
+                    <!-- Chibi Hearts Sticker at top-right corner -->
+                    <img src="assets/chibi_hearts.png?v=3" alt="Chibi Hearts Sticker"
+                        title="Sweet & Lovely 💖 Tap me!"
+                        class="chibi-sticker animate-sticker-2 w-16 sm:w-20 md:w-22 -top-6 -right-4 sm:-top-7 sm:-right-6"
+                        style="--sticker-rot: 8deg;">
                     <img src="assets/jenni6.jpg?v=2" alt="Deliska Cantika Mahendra" class="aspect-[4/5] object-cover">
                     <div class="mt-2 sm:mt-3 text-center font-handwriting text-dark-brown text-lg sm:text-xl md:text-2xl">
                         Tatap mata yang begitu menawan, a gaze so spellbinding it stops time itself 💙</div>
@@ -1082,8 +1080,13 @@
                 </div>
 
                 <!-- Photo 8 (jenni8.jpg) -->
-                <div data-aos="zoom-in-left" data-aos-delay="400" class="polaroid w-64 md:w-72 rotate-[-1.5deg] sm:rotate-[-3deg] z-10">
+                <div data-aos="zoom-in-left" data-aos-delay="400" class="polaroid w-64 md:w-72 rotate-[-1.5deg] sm:rotate-[-3deg] z-10 relative">
                     <div class="tape rotate-[4deg]"></div>
+                    <!-- Chibi Cat Ears Sticker at top-left corner -->
+                    <img src="assets/chibi_cat.png?v=3" alt="Chibi Cat Ears Sticker"
+                        title="Forever Cute 🐱 Tap me!"
+                        class="chibi-sticker animate-sticker-1 w-16 sm:w-20 md:w-22 -top-6 -left-4 sm:-top-7 sm:-left-6"
+                        style="--sticker-rot: -6deg;">
                     <img src="assets/jenni8.jpg?v=2" alt="Deliska Cantika Mahendra" class="aspect-[4/5] object-cover">
                     <div class="mt-2 sm:mt-3 text-center font-handwriting text-dark-brown text-lg sm:text-xl md:text-2xl">
                         Keindahan sempurna, crafted with incomparable grace and elegance 🦋</div>
@@ -1096,17 +1099,16 @@
                     <img src="assets/jenni9.jpg?v=2" alt="Deliska Cantika Mahendra" class="aspect-[4/5] object-cover">
                     <div class="mt-2 sm:mt-3 text-center font-handwriting text-dark-brown text-lg sm:text-xl md:text-2xl">
                         A playful soul yang selalu bawa tawa, kehangatan, and endless joy ✨</div>
-
-                    <!-- Cute Cat Ears Deliska Emote Sticker -->
-                    <img src="assets/emote_cute.png?v=2" alt="Forever Cute Deliska Emote"
-                        title="Tap me! 🐱 Forever Cute"
-                        class="emote-sticker animate-sticker-1 w-18 sm:w-22 md:w-24 -bottom-4 -right-3 sm:-bottom-5 sm:-right-5"
-                        style="--sticker-rot: 8deg;">
                 </div>
 
                 <!-- Photo 10 (jenni10.jpg) -->
                 <div data-aos="zoom-in-right" data-aos-delay="500" class="polaroid w-64 md:w-72 rotate-[-1.5deg] sm:rotate-[-6deg] z-10 relative">
                     <div class="tape rotate-[-2deg] z-20"></div>
+                    <!-- Chibi Crescent Moon Sticker at top-left corner -->
+                    <img src="assets/chibi_moon.png?v=3" alt="Chibi Moon Sticker"
+                        title="Midnight Starlight 🌙 Tap me!"
+                        class="chibi-sticker animate-sticker-2 w-16 sm:w-20 md:w-22 -top-6 -left-4 sm:-top-7 sm:-left-6"
+                        style="--sticker-rot: -8deg;">
                     <!-- Flower tucked at top-right corner away from caption -->
                     <img src="assets/rose.png?v=2" alt="Rose" class="w-16 sm:w-20 -top-6 sm:-top-8 -right-3 sm:-right-8 rotate-[15deg] pointer-events-none botanical-decor opacity-80 -z-10">
                     <img src="assets/jenni10.jpg?v=2" alt="Deliska Cantika Mahendra" class="aspect-[4/5] object-cover relative z-10">
@@ -1124,12 +1126,6 @@
                 class="bg-vintage-paper bg-paper-texture p-6 sm:p-10 md:p-14 rounded-sm shadow-paper relative border-2 border-[#BFDBFE]">
                 <!-- Washi Tape on Paper Corner -->
                 <div class="washi-tape-blue w-20 md:w-28 -top-3 -left-2 md:-left-5 -rotate-45 z-20"></div>
-
-                <!-- Angel Deliska Emote Sticker -->
-                <img src="assets/emote_angel.png?v=2" alt="Angel Deliska Emote"
-                    title="Tap me! 😇 Angel Deliska"
-                    class="emote-sticker animate-sticker-2 w-20 sm:w-24 md:w-28 -top-7 -right-2 sm:-top-9 sm:-right-5"
-                    style="--sticker-rot: 6deg;">
 
                 <!-- Botanical Lily tucked BEHIND right edge of paper -->
                 <img src="assets/lily.png?v=2" alt="Lily" class="w-16 sm:w-24 md:w-36 top-1/4 -right-3 sm:-right-6 md:-right-12 rotate-12 botanical-decor opacity-80 -z-10">
@@ -1236,8 +1232,8 @@
             triggerConfetti();
         });
 
-        // Deliska Face Emote Stickers Tap Interaction
-        document.querySelectorAll('.emote-sticker').forEach(sticker => {
+        // Deliska Cute Anime Chibi Stickers Tap Interaction
+        document.querySelectorAll('.chibi-sticker, .emote-sticker').forEach(sticker => {
             sticker.addEventListener('click', function (e) {
                 e.stopPropagation();
                 const rect = sticker.getBoundingClientRect();

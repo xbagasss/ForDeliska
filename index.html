@@ -357,6 +357,54 @@
             animation: starTwinkle 3.5s ease-in-out infinite;
         }
 
+        /* Deliska Custom Face Emote Stickers */
+        .emote-sticker {
+            position: absolute;
+            z-index: 30;
+            filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.45)) drop-shadow(0 0 10px rgba(56, 189, 248, 0.35));
+            transition: transform 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.275), filter 0.35s ease;
+            cursor: pointer;
+            user-select: none;
+            -webkit-user-drag: none;
+            touch-action: manipulation;
+        }
+
+        .emote-sticker:hover {
+            transform: scale(1.15) rotate(calc(var(--sticker-rot, 0deg) + 6deg)) !important;
+            filter: drop-shadow(0 14px 22px rgba(0, 0, 0, 0.6)) drop-shadow(0 0 18px rgba(56, 189, 248, 0.8));
+            z-index: 50 !important;
+        }
+
+        .emote-sticker:active {
+            transform: scale(0.92) rotate(var(--sticker-rot, 0deg)) !important;
+        }
+
+        @keyframes stickerFloat1 {
+            0%, 100% {
+                transform: translateY(0px) rotate(var(--sticker-rot, 0deg));
+            }
+            50% {
+                transform: translateY(-8px) rotate(calc(var(--sticker-rot, 0deg) + 3deg));
+            }
+        }
+
+        @keyframes stickerFloat2 {
+            0%, 100% {
+                transform: translateY(0px) rotate(var(--sticker-rot, 0deg));
+            }
+            50% {
+                transform: translateY(-8px) rotate(calc(var(--sticker-rot, 0deg) - 3deg));
+            }
+        }
+
+        .animate-sticker-1 {
+            animation: stickerFloat1 4.5s ease-in-out infinite;
+        }
+
+        .animate-sticker-2 {
+            animation: stickerFloat2 5.2s ease-in-out infinite;
+        }
+
         /* Birthday Cake Overlay Styles */
         #cake-overlay {
             backdrop-filter: blur(16px);
@@ -729,6 +777,12 @@
                         Pure Perfection — Pesonamu Selalu Memikat ✨
                     </div>
                 </div>
+
+                <!-- Queen Deliska Emote Sticker Floating at Bottom-Right of Hero Frame -->
+                <img src="assets/emote_queen.png?v=2" alt="Queen Deliska Emote"
+                    title="Tap me! ✨ Queen Deliska 21"
+                    class="emote-sticker animate-sticker-1 w-20 sm:w-24 md:w-28 -bottom-5 -right-3 sm:-bottom-7 sm:-right-7"
+                    style="--sticker-rot: 8deg;">
             </div>
 
             <!-- Hero Text -->
@@ -767,6 +821,12 @@
                 <!-- Washi Tape on Paper Corners -->
                 <div class="washi-tape-blue w-20 md:w-28 -top-3 -left-2 md:-left-5 -rotate-45 z-20"></div>
                 <div class="washi-tape-blue w-20 md:w-28 -top-3 -right-2 md:-right-5 rotate-45 z-20"></div>
+
+                <!-- Sweet & Lovely Deliska Emote Sticker Peeking at Top Right -->
+                <img src="assets/emote_hearts.png?v=2" alt="Sweet and Lovely Deliska Emote"
+                    title="Tap me! 💖 So Sweet & Lovely"
+                    class="emote-sticker animate-sticker-2 w-20 sm:w-24 md:w-28 -top-8 -right-2 sm:-top-10 sm:-right-6"
+                    style="--sticker-rot: 10deg;">
 
                 <!-- Pinned top -->
                 <div class="pin z-20">📌</div>
@@ -843,6 +903,12 @@
                 <div class="absolute top-4 right-4 text-soft-gold/40 text-xl pointer-events-none select-none star-twinkle" style="animation-delay: 1.5s;">✦</div>
                 <div class="absolute bottom-4 left-4 text-soft-gold/40 text-xl pointer-events-none select-none star-twinkle" style="animation-delay: 0.8s;">✦</div>
                 <div class="absolute bottom-4 right-4 text-soft-gold/40 text-xl pointer-events-none select-none star-twinkle" style="animation-delay: 2.2s;">✦</div>
+
+                <!-- Party Time Deliska Emote Sticker -->
+                <img src="assets/emote_party.png?v=2" alt="Party Time 21st Deliska Emote"
+                    title="Tap me! 🎉 Party Time 21st!"
+                    class="emote-sticker animate-sticker-1 w-18 sm:w-24 md:w-28 top-3 left-3 sm:top-5 sm:left-6"
+                    style="--sticker-rot: -6deg;">
 
                 <!-- Botanical Lavender tucked on corner -->
                 <img src="assets/lavender.png?v=2" alt="Lavender" class="w-20 sm:w-28 md:w-36 -top-6 sm:-top-10 -right-6 sm:-right-10 rotate-45 botanical-decor opacity-25 -z-10">
@@ -972,6 +1038,12 @@
                     <div class="sticky-note-blue -top-4 -left-2 sm:-left-3 -rotate-3 z-30 text-sm sm:text-base">Art in Human Form 💙</div>
                     <img src="assets/jenni3.jpg?v=2" alt="Deliska Cantika Mahendra" class="w-full aspect-square object-cover relative z-10">
                     <div class="absolute -top-5 sm:-top-6 -right-5 sm:-right-6 text-4xl sm:text-5xl drop-shadow-lg z-20">🦋</div>
+
+                    <!-- Iconic Deliska Emote Sticker -->
+                    <img src="assets/emote_iconic.png?v=2" alt="Iconic Deliska Emote"
+                        title="Tap me! ✨ Iconic Deliska 21"
+                        class="emote-sticker animate-sticker-2 w-18 sm:w-22 md:w-26 -bottom-5 -left-3 sm:-bottom-7 sm:-left-5"
+                        style="--sticker-rot: -6deg;">
                 </div>
 
                 <!-- Photo 4 (jenni4.jpg) -->
@@ -1024,6 +1096,12 @@
                     <img src="assets/jenni9.jpg?v=2" alt="Deliska Cantika Mahendra" class="aspect-[4/5] object-cover">
                     <div class="mt-2 sm:mt-3 text-center font-handwriting text-dark-brown text-lg sm:text-xl md:text-2xl">
                         A playful soul yang selalu bawa tawa, kehangatan, and endless joy ✨</div>
+
+                    <!-- Cute Cat Ears Deliska Emote Sticker -->
+                    <img src="assets/emote_cute.png?v=2" alt="Forever Cute Deliska Emote"
+                        title="Tap me! 🐱 Forever Cute"
+                        class="emote-sticker animate-sticker-1 w-18 sm:w-22 md:w-24 -bottom-4 -right-3 sm:-bottom-5 sm:-right-5"
+                        style="--sticker-rot: 8deg;">
                 </div>
 
                 <!-- Photo 10 (jenni10.jpg) -->
@@ -1047,12 +1125,17 @@
                 <!-- Washi Tape on Paper Corner -->
                 <div class="washi-tape-blue w-20 md:w-28 -top-3 -left-2 md:-left-5 -rotate-45 z-20"></div>
 
+                <!-- Angel Deliska Emote Sticker -->
+                <img src="assets/emote_angel.png?v=2" alt="Angel Deliska Emote"
+                    title="Tap me! 😇 Angel Deliska"
+                    class="emote-sticker animate-sticker-2 w-20 sm:w-24 md:w-28 -top-7 -right-2 sm:-top-9 sm:-right-5"
+                    style="--sticker-rot: 6deg;">
+
                 <!-- Botanical Lily tucked BEHIND right edge of paper -->
                 <img src="assets/lily.png?v=2" alt="Lily" class="w-16 sm:w-24 md:w-36 top-1/4 -right-3 sm:-right-6 md:-right-12 rotate-12 botanical-decor opacity-80 -z-10">
 
-                <!-- Decorative Top Pin & Stamps -->
+                <!-- Decorative Top Pin -->
                 <div class="pin z-20">📍</div>
-                <div class="absolute top-6 right-6 text-3xl sm:text-4xl opacity-30 select-none z-10">👑</div>
 
                 <!-- Header -->
                 <div class="text-center mb-6 sm:mb-8 relative z-10">
@@ -1151,6 +1234,35 @@
         document.getElementById('confetti-btn').addEventListener('click', function (e) {
             e.stopPropagation();
             triggerConfetti();
+        });
+
+        // Deliska Face Emote Stickers Tap Interaction
+        document.querySelectorAll('.emote-sticker').forEach(sticker => {
+            sticker.addEventListener('click', function (e) {
+                e.stopPropagation();
+                const rect = sticker.getBoundingClientRect();
+                const x = (rect.left + rect.width / 2) / window.innerWidth;
+                const y = (rect.top + rect.height / 2) / window.innerHeight;
+
+                // Playful pop bounce animation
+                sticker.animate([
+                    { transform: 'scale(0.85)' },
+                    { transform: 'scale(1.22)' },
+                    { transform: 'scale(1)' }
+                ], { duration: 380, easing: 'cubic-bezier(0.175, 0.885, 0.32, 1.275)' });
+
+                // Mini celestial burst confetti
+                confetti({
+                    particleCount: 22,
+                    spread: 60,
+                    startVelocity: 22,
+                    origin: { x: Math.max(0.05, Math.min(0.95, x)), y: Math.max(0.05, Math.min(0.95, y)) },
+                    colors: ['#38BDF8', '#60A5FA', '#BAE6FD', '#FDE047', '#F472B6', '#FFFFFF'],
+                    ticks: 110,
+                    scalar: 0.75,
+                    gravity: 0.85
+                });
+            });
         });
 
         // ==========================================
@@ -1377,12 +1489,12 @@
             player = new YT.Player('youtube-player', {
                 height: '0',
                 width: '0',
-                videoId: '6k8cpUkKK4c', // ← EDIT LAGU DI SINI (YouTube Video ID)
+                videoId: 'OT5msu-dap8', // ← EDIT LAGU DI SINI (YouTube Video ID)
                 playerVars: {
                     'autoplay': 1,
                     'controls': 0,
                     'loop': 1,
-                    'playlist': '6k8cpUkKK4c',
+                    'playlist': 'OT5msu-dap8',
                     'mute': 0
                 },
                 events: {

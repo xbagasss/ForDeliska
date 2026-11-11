@@ -728,16 +728,6 @@
 
     <!-- Hero Section -->
     <section class="relative min-h-screen flex flex-col items-center justify-center overflow-hidden z-10 px-4 py-16 sm:py-20 w-full">
-        <!-- Floating Chibi Stickers in Safe Margins (Zero photo/text overlap) -->
-        <div class="absolute top-20 sm:top-24 left-3 sm:left-8 md:left-14 lg:left-20 z-20 pointer-events-auto">
-            <img src="assets/chibi_cake.png?v=3" alt="Chibi Birthday Cake" title="Happy 21st Birthday Deliska! 🎂 Tap me!"
-                 class="chibi-sticker animate-sticker-1 w-16 sm:w-22 md:w-28 drop-shadow-2xl" style="--sticker-rot: -8deg;">
-        </div>
-        <div class="absolute top-24 sm:top-28 right-3 sm:right-8 md:right-14 lg:right-20 z-20 pointer-events-auto">
-            <img src="assets/chibi_cat.png?v=3" alt="Chibi Forever Cute" title="Forever Cute 🐱 Tap me!"
-                 class="chibi-sticker animate-sticker-2 w-16 sm:w-22 md:w-28 drop-shadow-2xl" style="--sticker-rot: 8deg;">
-        </div>
-
         <!-- Floating Celestial Blue Decorations & Twinkling Stars -->
         <div
             class="absolute top-10 left-6 sm:left-10 text-4xl sm:text-5xl opacity-40 rotate-12 drop-shadow-xl pointer-events-none floating-emoji">
@@ -771,6 +761,12 @@
                 <div
                     class="polaroid p-3 bg-vintage-paper rotate-[-1.5deg] sm:rotate-[-2deg] transition-transform duration-700 w-full mx-auto relative z-10">
                     <div class="tape rotate-3 top-[-15px]"></div>
+
+                    <!-- Mini Chibi Mascot 1: Birthday Cake (Beside Hero Photo) -->
+                    <img src="assets/chibi_cake.png?v=4" alt="Chibi Birthday Cake"
+                        title="Happy 21st Birthday Deliska! 🎂 Tap me!"
+                        class="chibi-sticker animate-sticker-1 w-11 sm:w-13 md:w-14 z-30 pointer-events-auto"
+                        style="left: calc(100% - 10px); top: 32%; --sticker-rot: 8deg;">
 
                     <!-- Mini Vintage Airmail Stamp -->
                     <div class="absolute -top-3 -right-3 bg-white/95 border border-sky-400 p-1 shadow-md transform rotate-6 z-20 hidden sm:block">
@@ -998,17 +994,7 @@
     <!-- Scrapbook Photo Gallery -->
     <section class="py-16 md:py-24 relative z-10 overflow-hidden">
         <div class="container mx-auto px-2 sm:px-4">
-            <div class="text-center mb-10 sm:mb-16 relative max-w-4xl mx-auto" data-aos="fade-in">
-                <!-- Chibi Stickers Flanking the Gallery Header in Safe Empty Margins -->
-                <div class="hidden sm:block absolute -top-4 left-0 md:left-4 pointer-events-auto">
-                    <img src="assets/chibi_crown.png?v=3" alt="Princess Deliska" title="Princess Deliska 👑 Tap me!"
-                         class="chibi-sticker animate-sticker-1 w-18 md:w-22 drop-shadow-xl" style="--sticker-rot: -10deg;">
-                </div>
-                <div class="hidden sm:block absolute -top-4 right-0 md:right-4 pointer-events-auto">
-                    <img src="assets/chibi_peace.png?v=3" alt="Cheerful Deliska" title="Stay Cheerful ✌️ Tap me!"
-                         class="chibi-sticker animate-sticker-2 w-18 md:w-22 drop-shadow-xl" style="--sticker-rot: 10deg;">
-                </div>
-
+            <div class="text-center mb-10 sm:mb-16" data-aos="fade-in">
                 <h2 class="font-vibes text-4xl sm:text-6xl md:text-7xl text-soft-gold text-glow-gold mb-3 px-2">The Timeless Beauty of Deliska Cantika Mahendra</h2>
                 <div class="w-28 sm:w-32 h-[1px] bg-soft-gold mx-auto opacity-50"></div>
             </div>
@@ -1027,8 +1013,13 @@
                 </div>
 
                 <!-- Photo 2 (jenni2.jpg) -->
-                <div data-aos="zoom-in" data-aos-delay="100" class="polaroid w-60 md:w-64 rotate-[1.5deg] sm:rotate-[7deg] z-10">
+                <div data-aos="zoom-in" data-aos-delay="100" class="polaroid w-60 md:w-64 rotate-[1.5deg] sm:rotate-[7deg] z-10 relative">
                     <div class="tape rotate-[-4deg]"></div>
+                    <!-- Mini Chibi Mascot 2: Princess Crown (Beside Photo 2) -->
+                    <img src="assets/chibi_crown.png?v=4" alt="Princess Deliska"
+                        title="Princess Deliska 👑 Tap me!"
+                        class="chibi-sticker animate-sticker-2 w-10 sm:w-12 md:w-14 z-30 pointer-events-auto"
+                        style="left: calc(100% - 8px); top: 25%; --sticker-rot: 8deg;">
                     <img src="assets/jenni2.jpg?v=2" alt="Deliska Cantika Mahendra" class="aspect-[4/5] object-cover">
                     <div class="mt-2 sm:mt-3 text-center font-handwriting text-dark-brown text-lg sm:text-xl md:text-2xl">Pesona yang begitu anggun, effortless grace that captivates every single heart 💫</div>
                 </div>
@@ -1044,8 +1035,13 @@
                 </div>
 
                 <!-- Photo 4 (jenni4.jpg) -->
-                <div data-aos="fade-up" data-aos-delay="200" class="polaroid w-64 md:w-72 rotate-[-1.5deg] sm:rotate-[-4deg] z-10">
+                <div data-aos="fade-up" data-aos-delay="200" class="polaroid w-64 md:w-72 rotate-[-1.5deg] sm:rotate-[-4deg] z-10 relative">
                     <div class="pin">📌</div>
+                    <!-- Mini Chibi Mascot 3: Peace Sign (Beside Photo 4) -->
+                    <img src="assets/chibi_peace.png?v=4" alt="Stay Cheerful"
+                        title="Stay Cheerful ✌️ Tap me!"
+                        class="chibi-sticker animate-sticker-1 w-10 sm:w-12 md:w-14 z-30 pointer-events-auto"
+                        style="right: calc(100% - 8px); top: 35%; --sticker-rot: -8deg;">
                     <img src="assets/jenni4.jpg?v=2" alt="Deliska Cantika Mahendra" class="aspect-[4/5] object-cover">
                     <div class="mt-2 sm:mt-3 text-center font-handwriting text-dark-brown text-lg sm:text-xl md:text-2xl">
                         Cahaya manismu tak pernah pudar, an everlasting radiance that stays forever 🕊️</div>
@@ -1060,8 +1056,13 @@
                 </div>
 
                 <!-- Photo 6 (jenni6.jpg) -->
-                <div data-aos="zoom-in-right" data-aos-delay="300" class="polaroid w-64 md:w-72 rotate-[-1.5deg] sm:rotate-[-5deg] z-10">
+                <div data-aos="zoom-in-right" data-aos-delay="300" class="polaroid w-64 md:w-72 rotate-[-1.5deg] sm:rotate-[-5deg] z-10 relative">
                     <div class="tape rotate-[-3deg]"></div>
+                    <!-- Mini Chibi Mascot 4: Hugging Heart (Beside Photo 6) -->
+                    <img src="assets/chibi_hearts.png?v=4" alt="Sweet & Lovely"
+                        title="Sweet & Lovely 💖 Tap me!"
+                        class="chibi-sticker animate-sticker-2 w-10 sm:w-12 md:w-14 z-30 pointer-events-auto"
+                        style="left: calc(100% - 8px); top: 30%; --sticker-rot: 8deg;">
                     <img src="assets/jenni6.jpg?v=2" alt="Deliska Cantika Mahendra" class="aspect-[4/5] object-cover">
                     <div class="mt-2 sm:mt-3 text-center font-handwriting text-dark-brown text-lg sm:text-xl md:text-2xl">
                         Tatap mata yang begitu menawan, a gaze so spellbinding it stops time itself 💙</div>
@@ -1079,8 +1080,13 @@
                 </div>
 
                 <!-- Photo 8 (jenni8.jpg) -->
-                <div data-aos="zoom-in-left" data-aos-delay="400" class="polaroid w-64 md:w-72 rotate-[-1.5deg] sm:rotate-[-3deg] z-10">
+                <div data-aos="zoom-in-left" data-aos-delay="400" class="polaroid w-64 md:w-72 rotate-[-1.5deg] sm:rotate-[-3deg] z-10 relative">
                     <div class="tape rotate-[4deg]"></div>
+                    <!-- Mini Chibi Mascot 5: Cat Ears (Beside Photo 8) -->
+                    <img src="assets/chibi_cat.png?v=4" alt="Forever Cute"
+                        title="Forever Cute 🐱 Tap me!"
+                        class="chibi-sticker animate-sticker-1 w-10 sm:w-12 md:w-14 z-30 pointer-events-auto"
+                        style="right: calc(100% - 8px); top: 35%; --sticker-rot: -8deg;">
                     <img src="assets/jenni8.jpg?v=2" alt="Deliska Cantika Mahendra" class="aspect-[4/5] object-cover">
                     <div class="mt-2 sm:mt-3 text-center font-handwriting text-dark-brown text-lg sm:text-xl md:text-2xl">
                         Keindahan sempurna, crafted with incomparable grace and elegance 🦋</div>
@@ -1098,6 +1104,11 @@
                 <!-- Photo 10 (jenni10.jpg) -->
                 <div data-aos="zoom-in-right" data-aos-delay="500" class="polaroid w-64 md:w-72 rotate-[-1.5deg] sm:rotate-[-6deg] z-10 relative">
                     <div class="tape rotate-[-2deg] z-20"></div>
+                    <!-- Mini Chibi Mascot 6: Crescent Moon (Beside Photo 10) -->
+                    <img src="assets/chibi_moon.png?v=4" alt="Midnight Starlight"
+                        title="Midnight Starlight 🌙 Tap me!"
+                        class="chibi-sticker animate-sticker-2 w-10 sm:w-12 md:w-14 z-30 pointer-events-auto"
+                        style="right: calc(100% - 8px); top: 30%; --sticker-rot: -8deg;">
                     <!-- Flower tucked at top-right corner away from caption -->
                     <img src="assets/rose.png?v=2" alt="Rose" class="w-16 sm:w-20 -top-6 sm:-top-8 -right-3 sm:-right-8 rotate-[15deg] pointer-events-none botanical-decor opacity-80 -z-10">
                     <img src="assets/jenni10.jpg?v=2" alt="Deliska Cantika Mahendra" class="aspect-[4/5] object-cover relative z-10">
@@ -1152,25 +1163,12 @@
 
     <!-- Interactive Section -->
     <section class="py-16 md:py-24 relative z-10 text-center border-t border-soft-gold/20 overflow-hidden px-4">
-        <div data-aos="zoom-in" class="max-w-3xl mx-auto flex flex-col items-center justify-center relative">
+        <div data-aos="zoom-in" class="inline-block relative">
             <h2 class="font-vibes text-4xl sm:text-6xl md:text-7xl text-soft-gold mb-6 md:mb-8 px-2">Celebrate Deliska's 21st Birthday 🎂</h2>
-            
-            <div class="flex items-center justify-center gap-3 sm:gap-6 md:gap-8 my-2">
-                <!-- Chibi Hugging Heart -->
-                <img src="assets/chibi_hearts.png?v=3" alt="Sweet & Lovely Deliska" title="So Sweet & Lovely 💖 Tap me!"
-                     class="chibi-sticker animate-sticker-1 w-18 sm:w-24 md:w-28 drop-shadow-2xl" style="--sticker-rot: -8deg;">
-
-                <!-- Confetti Button -->
-                <button id="confetti-btn"
-                    class="group relative px-6 sm:px-10 py-3.5 sm:py-4 bg-transparent border border-soft-gold text-soft-gold font-playfair text-base sm:text-xl hover:bg-soft-gold hover:text-dark-brown transition-colors overflow-hidden rounded-full shadow-lg">
-                    <span class="relative z-10">Send Birthday Wishes & Confetti ✨</span>
-                </button>
-
-                <!-- Chibi Starlight Moon -->
-                <img src="assets/chibi_moon.png?v=3" alt="Midnight Starlight Deliska" title="Midnight Starlight 🌙 Tap me!"
-                     class="chibi-sticker animate-sticker-2 w-18 sm:w-24 md:w-28 drop-shadow-2xl" style="--sticker-rot: 8deg;">
-            </div>
-            <p class="text-xs sm:text-sm text-sky-200/70 font-inter mt-4">✨ Sentuh atau klik stikernya untuk letupan bintang konfeti</p>
+            <button id="confetti-btn"
+                class="group relative px-6 sm:px-10 py-3.5 sm:py-4 bg-transparent border border-soft-gold text-soft-gold font-playfair text-base sm:text-xl hover:bg-soft-gold hover:text-dark-brown transition-colors overflow-hidden rounded-full shadow-lg">
+                <span class="relative z-10">Send Birthday Wishes & Confetti ✨</span>
+            </button>
         </div>
     </section>
     <!-- Thank You Section -->
